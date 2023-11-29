@@ -1,0 +1,104 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<link rel="stylesheet" href=>
+	</head>
+	
+	<body class="body-style">
+		<Header title={SITE_TITLE} />
+		<main class="main-content">
+		  <div class="content-container">
+			<div class="text-content">
+			  <h1>👋 Hello, my name is Emilia Galarza!</h1>
+			  <p>
+				I'm a dedicated Software Engineering student with a passion for Frontend Development.
+				My focus is on creating responsive and accessible user interfaces using modern web technologies.
+				Currently, I am expanding my expertise in frameworks like React and Vue.js, and tools such as Webpack and Babel.
+			  </p>
+			  <div class="contact-info">
+				<h2>Contact</h2>
+				<p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+				<p>LinkedIn: <a href="your-linkedin-url" target="_blank">your-linkedin-profile</a></p>
+				<p>GitHub: <a href="https://github.com/your-username" target="_blank">your-username</a></p>
+			  </div>
+			</div>
+			<img class="profile-img" src='/foto.jpg' alt="Emilia Galarza" /> 
+		  </div>
+		</main>
+		<Footer />
+	  </body>
+<style>
+.body-style {
+  background: white; /* White background for the body */
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  max-width: 1000px; /* Adjust as needed for your design */
+  gap: 20px; /* Creates space between text and image */
+}
+
+.text-content {
+  max-width: 50%; /* Adjust text content width as needed */
+}
+
+.profile-img {
+  width: 200px; /* Increased size */
+  height: 200px; /* Increased size */
+  border-radius: 50%;
+  object-fit: cover; /* This will ensure the image covers the area without stretching */
+  border: 5px solid white; /* Optional: Adds a white border around the image */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow to the image */
+}
+
+.contact-info h2 {
+  margin-top: 24px;
+}
+
+/* Additional responsive styling */
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-img {
+    width: 150px; /* Adjust size as needed for smaller devices */
+    height: 150px; /* Adjust size as needed for smaller devices */
+    margin-bottom: 20px;
+  }
+
+  .text-content {
+    max-width: 100%;
+  }
+}
+
+</style>	
+</html>
+

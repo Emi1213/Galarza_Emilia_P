@@ -1,0 +1,57 @@
+/* main.css */
+
+.body-style {
+  background: white;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.content-container {
+  display: flex;
+  align-items: flex-start;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 800px; /* Adjust as needed for your design */
+}
+
+.text-content {
+  flex: 1;
+}
+
+.contact-info h2 {
+  margin-top: 24px;
+}
+
+.profile-img {
+  width: 100px; /* Adjust size as needed */
+  height: 100px; /* Adjust size as needed */
+  border-radius: 50%;
+  object-fit: cover; /* This will ensure the image covers the area without stretching */
+  margin-left: 20px;
+}
+
+/* Additional responsive styling */
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-img {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .text-content {
+    text-align: center;
+  }
+}
